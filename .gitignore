@@ -1,0 +1,27 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Docker
+docker-compose.yml
+Dockerfile
+.dockerignore
+
+# MySQL
+*.sql
+*.sql.gz
+
+# VSCode
+.vscode/
+
+# Sandbox directory
+sandbox/
+
+# ENV files
+.env
+.env*
+!.env.example
+
+# MISC
+.instructions
