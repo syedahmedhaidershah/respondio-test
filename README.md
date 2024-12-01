@@ -47,7 +47,7 @@ A Note Taking application using ExpressJS, MySQL, and Redis.
    
 6. The application will be available at `http://localhost:3000`. You can verify your container state from docker as well, using Docker Desktop, for instance:
    ![Build Output](./docs/img/screenshots/Screenshot%202024-12-01%20at%2017.20.54.png "Docker Container Log").
-   You can also verify the API health via the `/api/health` endpoint on port `3000`.
+   You can also verify the API health via the `/api/v1/health` endpoint on port `3000`.
    ![Build Output](./docs/img/screenshots/Screenshot%202024-12-01%20at%2017.25.58.png "cURL for API health").
 
 ## Note
