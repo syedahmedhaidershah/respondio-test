@@ -1,0 +1,231 @@
+2024-12-01T11:03:56.458Z [[32minfo[39m]: Application started 
+2024-12-01T11:47:31.691Z [[32minfo[39m]: Application started 
+2024-12-01T11:49:40.461Z [[32minfo[39m]: Application started 
+2024-12-01T11:49:49.826Z [[32minfo[39m]: Application started 
+2024-12-01T11:49:59.907Z [[32minfo[39m]: Application started 
+2024-12-01T11:50:41.727Z [[32minfo[39m]: Application started 
+2024-12-01T11:51:19.393Z [[32minfo[39m]: Application started 
+2024-12-01T11:52:19.719Z [[32minfo[39m]: Application started 
+2024-12-01T11:53:17.635Z [[32minfo[39m]: Application started 
+2024-12-01T11:53:55.072Z [[32minfo[39m]: Application started 
+2024-12-01T11:54:04.013Z [[32minfo[39m]: Application started 
+2024-12-01T11:58:55.071Z [[32minfo[39m]: Application started 
+2024-12-01T11:58:58.425Z [[32minfo[39m]: Application started 
+2024-12-01T12:15:40.386Z [[32minfo[39m]: Application started 
+2024-12-01T12:16:05.505Z [[32minfo[39m]: Application started 
+2024-12-01T12:16:12.859Z [[32minfo[39m]: Application started 
+2024-12-01T12:16:16.041Z [[32minfo[39m]: Application started 
+2024-12-01T12:18:01.398Z [[32minfo[39m]: Application started 
+2024-12-01T12:18:19.588Z [[32minfo[39m]: Application started 
+2024-12-01T12:18:33.619Z [[32minfo[39m]: Application started 
+2024-12-01T12:19:49.475Z [[32minfo[39m]: Application started 
+2024-12-01T12:20:08.275Z [[32minfo[39m]: Application started 
+2024-12-01T12:20:09.253Z [[32minfo[39m]: Incoming request: GET /health {
+  "meta": {
+    "headers": {
+      "host": "localhost:3000",
+      "connection": "keep-alive",
+      "cache-control": "max-age=0",
+      "sec-ch-ua": "\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"macOS\"",
+      "dnt": "1",
+      "upgrade-insecure-requests": "1",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+      "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+      "sec-fetch-site": "none",
+      "sec-fetch-mode": "navigate",
+      "sec-fetch-user": "?1",
+      "sec-fetch-dest": "document",
+      "accept-encoding": "gzip, deflate, br, zstd",
+      "accept-language": "en-US,en;q=0.9",
+      "cookie": "_ga=GA1.1.804518611.1721131409; _ga_QJQBKQEK2E=GS1.1.1721933641.6.0.1721933641.0.0.0; _ga_C1Q1W1VFY2=GS1.1.1731568629.27.0.1731568629.0.0.0; _ga_Y2VY6496DQ=GS1.1.1731917175.25.0.1731917175.0.0.0"
+    },
+    "query": {}
+  }
+}
+2024-12-01T12:20:09.373Z [[32minfo[39m]: Incoming request: GET /favicon.ico {
+  "meta": {
+    "headers": {
+      "host": "localhost:3000",
+      "connection": "keep-alive",
+      "sec-ch-ua-platform": "\"macOS\"",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"",
+      "dnt": "1",
+      "sec-ch-ua-mobile": "?0",
+      "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+      "sec-fetch-site": "same-origin",
+      "sec-fetch-mode": "no-cors",
+      "sec-fetch-dest": "image",
+      "accept-encoding": "gzip, deflate, br, zstd",
+      "accept-language": "en-US,en;q=0.9",
+      "cookie": "_ga=GA1.1.804518611.1721131409; _ga_QJQBKQEK2E=GS1.1.1721933641.6.0.1721933641.0.0.0; _ga_C1Q1W1VFY2=GS1.1.1731568629.27.0.1731568629.0.0.0; _ga_Y2VY6496DQ=GS1.1.1731917175.25.0.1731917175.0.0.0"
+    },
+    "query": {}
+  }
+}
+2024-12-01T12:20:21.959Z [[32minfo[39m]: Application started 
+2024-12-01T12:31:35.886Z [[32minfo[39m]: Application started 
+2024-12-01T12:31:49.674Z [[32minfo[39m]: Application started 
+2024-12-01T12:32:21.909Z [[32minfo[39m]: Incoming request: POST /api/v1/auth/register {
+  "meta": {
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "curl/8.7.1",
+      "accept": "*/*",
+      "content-type": "application/json",
+      "content-length": "58"
+    },
+    "query": {}
+  }
+}
+2024-12-01T12:32:21.920Z [[32minfo[39m]: Registering new user {
+  "username": "testuser"
+}
+2024-12-01T12:32:21.991Z [[31merror[39m]: Error registering user {
+  "error": {}
+}
+2024-12-01T12:33:35.955Z [[32minfo[39m]: [32mApplication started[39m 
+2024-12-01T12:34:12.038Z [[32minfo[39m]: [32mApplication started[39m 
+2024-12-01T12:34:17.607Z [[32minfo[39m]: [32mIncoming request: POST /api/v1/auth/register[39m {
+  "meta": {
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "curl/8.7.1",
+      "accept": "*/*",
+      "content-type": "application/json",
+      "content-length": "58"
+    },
+    "query": {}
+  }
+}
+2024-12-01T12:34:17.619Z [[32minfo[39m]: [32mRegistering new user[39m {
+  "username": "testuser"
+}
+2024-12-01T12:34:17.696Z [[31merror[39m]: [31mError registering user[39m {
+  "error": {
+    "name": "SequelizeValidationError",
+    "errors": [
+      {
+        "message": "User.email cannot be null",
+        "type": "notNull Violation",
+        "path": "email",
+        "value": null,
+        "origin": "CORE",
+        "instance": {
+          "id": null,
+          "username": "testuser",
+          "password": "$2a$10$FtcNzWs70Yioqc.H.86JAejiH0ptjbNzMmqMON7dBLop7ZGiRVar6",
+          "updatedAt": "2024-12-01T12:34:17.695Z",
+          "createdAt": "2024-12-01T12:34:17.695Z"
+        },
+        "validatorKey": "is_null",
+        "validatorName": null,
+        "validatorArgs": []
+      }
+    ]
+  }
+}
+2024-12-01T12:34:17.696Z [[31merror[39m]: [31mError registering user[39m {
+  "error": {}
+}
+2024-12-01T12:35:58.872Z [[32minfo[39m]: [32mApplication started[39m 
+2024-12-01T12:36:00.302Z [[32minfo[39m]: [32mApplication started[39m 
+2024-12-01T12:36:01.630Z [[32minfo[39m]: [32mApplication started[39m 
+2024-12-01T12:36:41.256Z [[32minfo[39m]: [32mApplication started[39m 
+2024-12-01T12:36:42.589Z [[32minfo[39m]: [32mApplication started[39m 
+2024-12-01T12:36:48.036Z [[32minfo[39m]: [32mIncoming request: POST /api/v1/auth/register[39m {
+  "meta": {
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "curl/8.7.1",
+      "accept": "*/*",
+      "content-type": "application/json",
+      "content-length": "58"
+    },
+    "query": {}
+  }
+}
+2024-12-01T12:38:12.886Z [[32minfo[39m]: [32mIncoming request: POST /api/v1/auth/register[39m {
+  "meta": {
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "curl/8.7.1",
+      "accept": "*/*",
+      "content-type": "application/json",
+      "content-length": "93"
+    },
+    "query": {}
+  }
+}
+2024-12-01T12:38:12.929Z [[32minfo[39m]: [32mRegistering new user[39m {
+  "username": "testuser"
+}
+2024-12-01T12:38:13.025Z [[31merror[39m]: [31mError registering user[39m {
+  "error": {
+    "name": "SequelizeValidationError",
+    "errors": [
+      {
+        "message": "User.email cannot be null",
+        "type": "notNull Violation",
+        "path": "email",
+        "value": null,
+        "origin": "CORE",
+        "instance": {
+          "id": null,
+          "username": "testuser",
+          "password": "$2a$10$/32t7xGCZ9x9U8MfLKlMJOsTQHbrJtvnFk0YiqRYpbJtX3vv1HZEi",
+          "updatedAt": "2024-12-01T12:38:13.023Z",
+          "createdAt": "2024-12-01T12:38:13.023Z"
+        },
+        "validatorKey": "is_null",
+        "validatorName": null,
+        "validatorArgs": []
+      }
+    ]
+  }
+}
+2024-12-01T12:38:13.026Z [[31merror[39m]: [31mError registering user[39m {
+  "error": {}
+}
+2024-12-01T12:39:20.154Z [[32minfo[39m]: [32mApplication started[39m 
+2024-12-01T12:39:21.191Z [[32minfo[39m]: [32mApplication started[39m 
+2024-12-01T12:39:25.273Z [[32minfo[39m]: [32mIncoming request: POST /api/v1/auth/register[39m {
+  "meta": {
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "curl/8.7.1",
+      "accept": "*/*",
+      "content-type": "application/json",
+      "content-length": "93"
+    },
+    "query": {}
+  }
+}
+2024-12-01T12:39:25.289Z [[32minfo[39m]: [32mRegistering new user[39m {
+  "username": "testuser"
+}
+2024-12-01T12:39:25.520Z [[32minfo[39m]: [32mUser registered successfully[39m {
+  "userId": 1
+}
+2024-12-01T12:40:26.609Z [[32minfo[39m]: [32mApplication started[39m 
+2024-12-01T12:40:27.669Z [[32minfo[39m]: [32mApplication started[39m 
+2024-12-01T12:40:39.332Z [[32minfo[39m]: [32mIncoming request: POST /api/v1/auth/register[39m {
+  "meta": {
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "curl/8.7.1",
+      "accept": "*/*",
+      "content-type": "application/json",
+      "content-length": "95"
+    },
+    "query": {}
+  }
+}
+2024-12-01T12:40:39.350Z [[32minfo[39m]: [32mRegistering new user[39m {
+  "username": "testuser2"
+}
+2024-12-01T12:40:39.470Z [[32minfo[39m]: [32mUser registered successfully[39m {
+  "userId": 2
+}

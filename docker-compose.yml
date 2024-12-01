@@ -1,0 +1,66 @@
+version: '3.8' # Specify the version of Docker Compose
+
+services: # Define the services that make up the application
+  app: # Define the app service
+    image: respondio-app # Use the respondio-app image
+    restart: on-failure:3 # Restart the container up to 3 times if it fails
+    environment: # Set environment variables for the app service
+      - NODE_ENV=${NODE_ENV} # Node environment variable
+      - DB_HOST=${DB_HOST} # Database host
+      - DB_NAME=${DB_NAME} # Database name
+      - DB_USER=${DB_USER} # Database user
+      - DB_PASS=${DB_PASS} # Database password
+      - SYNC_DB=${SYNC_DB:-""} # Sync database flag, default to empty string
+      - JWT_SECRET=${JWT_SECRET} # JWT secret key
+      - REDIS_HOST=host.docker.internal # Redis host
+      - REDIS_PORT=${REDIS_PORT} # Redis port
+      - REDIS_PASS=${REDIS_PASS} # Redis password
+      - LOG_LEVEL=${LOG_LEVEL} # Log level
+    depends_on: # Define dependencies for the app service
+      mysql: # Depend on the mysql service
+        condition: service_healthy # Wait for mysql to be healthy
+      redis: # Depend on the redis service
+        condition: service_healthy # Wait for redis to be healthy
+    healthcheck: # Define a health check for the app service
+      test: ["CMD", "curl", "-f", "http://localhost:3000/health"] # Command to check health
+      interval: 30s # Time between health checks
+      timeout: 5s # Time to wait for a health check to complete
+      retries: 5 # Number of retries before considering the service unhealthy
+    ports:
+      - 3000:3000 # Map port 3000 on the host to port 3000 on the container
+
+  mysql: # Define the mysql service
+    image: mysql # Use the mysql image
+    environment: # Set environment variables for the mysql service
+      MYSQL_ROOT_PASSWORD: ${DB_PASS} # MySQL root password
+      MYSQL_DATABASE: ${DB_NAME} # MySQL database name
+      MYSQL_ROOT_HOST: '%' # Allow connections from any host
+    volumes: # Define volumes for the mysql service
+      - mysql-data:/var/lib/mysql # Mount the mysql-data volume
+    ports: # Expose ports for the mysql service
+      - "3306:3306" # Map port 3306 on the host to port 3306 on the container
+    healthcheck: # Define a health check for the mysql service
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"] # Command to check health
+      interval: 30s # Time between health checks
+      timeout: 5s # Time to wait for a health check to complete
+      retries: 5 # Number of retries before considering the service unhealthy
+
+  redis: # Define the redis service
+    image: redis:7.4-rc2-alpine3.20 # Use the redis image with a specific version
+    restart: always # Always restart the container if it fails
+    environment: # Set environment variables for the redis service
+      - REDIS_PASSWORD=${REDIS_PASS} # Redis password
+    command: redis-server --save 20 1 --loglevel warning --requirepass ${REDIS_PASS} # Command to run redis with specific options
+    volumes: # Define volumes for the redis service
+      - redis-data:/data # Mount the redis-data volume
+    ports: # Expose ports for the redis service
+      - "6379:6379" # Map port 6379 on the host to port 6379 on the container
+    healthcheck: # Define a health check for the redis service
+      test: ["CMD", "redis-cli", "ping"] # Command to check health
+      interval: 30s # Time between health checks
+      timeout: 5s # Time to wait for a health check to complete
+      retries: 5 # Number of retries before considering the service unhealthy
+
+volumes: # Define named volumes
+  mysql-data: # Volume for mysql data
+  redis-data: # Volume for redis data
